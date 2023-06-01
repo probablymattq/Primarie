@@ -1,0 +1,159 @@
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+#formContainer {
+    font-family: "Helvetica Neue", sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1101;
+}
+
+#openFormButton {
+    background: #26408d;
+    background: linear-gradient(to right, #2465a3, #26408d);
+    color: #ffffff;
+    padding: 0.8rem 10rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto 0.2rem;
+    border-radius: 1rem;
+}
+
+
+#formContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formContainer input,
+#formContainer textarea {
+    width: 100%;
+    max-width: 400px;
+    min-width: 400px;
+    padding: 1rem;
+    max-height: 250px;
+    min-height: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 1rem;
+}
+
+#formContainer input:focus,
+#formContainer textarea:focus {
+    border-color: #2465a3;
+    border-width: 2px;
+    outline: none;
+}
+
+#formContainer button[type="submit"] {
+    background: #26408d;
+    background: linear-gradient(to right, #2465a3, #26408d);
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#closeFormButton {
+    background: #26408d;
+    background: linear-gradient(to right, #2465a3, #26408d);
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+#contentContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.news-container {
+    font-family: "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    max-width: 70rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.news-article {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.news-container .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news-container .content {
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.news-container .author {
+    font-size: 12px;
+    font-style: italic;
+    color: #888888;
+    text-align: right;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 1000px) {
+    #openFormButton {
+        padding: 0.8rem 10rem;
+        font-size: 2.3rem;
+    }
+
+    #formContainer {
+        padding: 6rem;
+        font-size: 2rem;
+    }
+
+    #formContainer input,
+    #formContainer textarea {
+        font-size: 1.6rem;
+        max-width: 600px;
+        min-width: 600px;
+        padding: 1rem;
+        max-height: 450px;
+        min-height: 30px;
+    }
+
+    #closeFormButton {
+        font-size: 1.6rem;
+    }
+
+    #formContainer button[type="submit"] {
+        font-size: 1.6rem;
+    }
+}
