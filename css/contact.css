@@ -3,7 +3,7 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 1rem;
-  margin-bottom: 2rem;
+  position: relative;
 }
 
 .form-container h1 {
@@ -23,7 +23,7 @@ textarea {
   width: 100%;
   max-width: 700px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #cccccc;
   border-radius: 1rem;
 }
@@ -59,15 +59,26 @@ textarea {
   border-radius: 1rem;
 }
 
+.form-container #submitted {
+  display: none;
+  font-weight: bold;
+  color: #2465a3;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 1000px) {
   .form-container input,
   textarea {
     width: 100%;
     padding: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .form-container button {
     padding: 10px 15px;
+    font-size: 1.6rem;
+    border-radius: 2.5rem;
   }
 
   .form-container i {

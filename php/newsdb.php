@@ -16,6 +16,9 @@ function connection()
     return $GLOBALS['conn'];
 }
 
+showNews();
+
+function showNews() {
 $sql = "SELECT * FROM news";
 $result = connection()->query($sql);
 
@@ -44,10 +47,10 @@ if ($result->num_rows > 0) {
     echo '<div class="content"><center>Nici o noutate nu a fost scrisă până în acest moment. <strong>Fii tu primul!</strong></center></div>';
     echo '</div>';
 }
+}
 
 
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_key']) && $_POST['form_key'] === 'Form') {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $content = $_POST['content'];
@@ -59,5 +62,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: ../news.php');
             exit;
         }
+}
+
+if(isset($_POST['action'])) {
+    $action = $_POST['action'];
+
+    if($action === 'deleteNews'){
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $author = $_POST['author'];
+
+    showNews();
+
+    deleteNews($title, $content, $author);
+    exit;
+    }
+ }
+
+function deleteNews($title, $content, $author)
+{
+    $sql = "DELETE FROM news WHERE title = '$title' AND REPLACE(content, '\r', '') = '$content' AND author = '$author'";
+    connection()->query($sql);
 }
 ?>

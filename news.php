@@ -37,6 +37,7 @@
         <li><a href="#" style="color: #2871fa">Noutăți</a></li>
         <li><a href="services.html">Servicii</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><i class='fas fa-user-alt' id='signin-btn'></i></li>
       </ul>
     </nav>
 
@@ -47,6 +48,17 @@
         <span class="line"></span>
       </button>
     </div>
+
+    <div id="sidebar-overlay"></div>
+
+        <div class="signin">
+          <form onsubmit="return false;">
+            <input type="hidden" name="form_key" value="Form">
+            <input type="text" name="username" placeholder="Nume de utilizator" required>
+            <input type="password" name="password" placeholder="Parola" required>
+            <button onclick="login()">Login</button>
+          </form>
+        </div>
 
     <div class="sidebar">
       <ul>
@@ -63,6 +75,7 @@
       <div id="formContainer">
           <h2 style="text-align: center;">Adaugă informații</h2>
           <form action="php/newsdb.php" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="form_key" value="Form">
               <input type="text" name="title" placeholder="Titlu" required>
               <input type="text" name="author" placeholder="Autor" required>
               <textarea name="content" placeholder="Conținut" required></textarea>
@@ -79,6 +92,8 @@
         <div class="page-name" id="news-name"></div>
       </div>
     </div>
+
+    <div id="window"></div>
 
     <button id="openFormButton">Adaugă un articol</button>
 
@@ -102,23 +117,23 @@
       <div class="footer-section">
         <h3>Despre noi</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          bibendum eros eu ullamcorper suscipit. Praesent at consequat augue,
-          vel lacinia magna. Fusce tincidunt auctor justo vel tristique.
+          Coșcalia este un sat pitoresc din Republica Moldova, situat în raionul Căușeni.
+          Cu o populație prietenoasă și tradiții bogate, satul oferă o atmosferă autentică,
+          îmbinând frumusețea naturală a peisajului rural cu istoria și cultura locală.
         </p>
       </div>
 
       <div class="footer-section">
         <h3>Contact</h3>
         <p>
-          <a href="tel:+373123456789"
-            ><i class="fas fa-phone"></i> +373123456789</a
+          <a href="tel:+37324366236"
+            ><i class="fas fa-phone"></i> +37324366236</a
           ><br />
           <a href="https://www.facebook.com/natalia.tibirna.712"
             ><i class="fab fa-facebook"></i> Primaria Satului Coscalia</a
           ><br />
-          <a href="mailto:exemple@exemplu.ro"
-            ><i class="fas fa-envelope"></i> exemple@exemplu.ro</a
+          <a href="mailto:primariacoscalia@mail.ru"
+            ><i class="fas fa-envelope"></i> primariacoscalia@mail.ru</a
           >
         </p>
       </div>

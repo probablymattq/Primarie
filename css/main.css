@@ -81,7 +81,7 @@ body.dark-theme {
 }
 
 .page-name span {
-  font-family: "Monaco", monospace;
+  font-family: "Optima", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -105,15 +105,15 @@ body.dark-theme {
 @media screen and (max-width: 1000px) {
 
   #scrollToTopBtn {
-    padding: 2.8rem;
-    font-size: 2.4rem;
+    padding: 2.3rem;
+    font-size: 1.9rem;
     bottom: 2rem;
     right: 2rem;
+    border-radius: 4rem;
   }
 
   .section {
-    padding: 2rem;
-    margin-left: -2rem;
+    margin-top: 11rem;
   }
   
   .page-name span {
