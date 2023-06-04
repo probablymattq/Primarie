@@ -60,6 +60,7 @@
 }
 
 #deleteNews {
+    display: flex;
     right: 1rem;
 }
 
@@ -98,7 +99,7 @@
     padding: 0.8rem 10rem;
     border: none;
     cursor: pointer;
-    display: block;
+    display: none;
     margin: 1rem auto 0.2rem;
     border-radius: 1rem;
 }

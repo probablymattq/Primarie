@@ -13,20 +13,6 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "smooth");
   });
 
-  $(window).on("load resize", function () {
-    var windowHeight = $(window).height();
-    var contentHeight =
-        $(document).height() -
-        $("header").outerHeight() -
-        $("footer").outerHeight();
-
-    if (contentHeight < windowHeight) {
-      $("footer").addClass("fixed-footer");
-    } else {
-      $("footer").removeClass("fixed-footer");
-    }
-  });
-
   const indexSection = $("#index-name");
   const contactSection = $("#contact-name");
   const newsSection = $("#news-name");
@@ -66,4 +52,29 @@ $(document).ready(function () {
         "<span>" + repeatText(textToRepeatS, repetitions) + "</span>"
     );
   }
+});
+
+function getCookie(cname) {
+  let login = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(login) === 0) {
+      return c.substring(login.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("login");
+  if (user !== "") {
+    $('#signin-btn').css({color: "#2871fa"})
+  }
+}
+
+$(document).ready(function() {
+  checkCookie();
 });

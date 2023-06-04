@@ -37,6 +37,7 @@ header i {
   font-family: 'Trebuchet MS', sans-serif;
 }
 
+
 .signin input {
   width: 60%;
   height: 1rem;
@@ -44,6 +45,12 @@ header i {
   border: 1px solid #cccccc;
   border-radius: 1rem;
   margin-top: 0.5rem;
+}
+
+.signin input:focus {
+  border-color: #2465a3;
+  border-width: 2px;
+  outline: none;
 }
 
 .signin button{
@@ -105,6 +112,19 @@ nav a:hover {
 .scroll-size {
   padding: 0.3rem;
 }
+
+.shake {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  20%, 40%, 60%, 80% { transform: translate(-50%, -50%) translateX(-10px); }
+  30%, 50%, 70%, 90% { transform: translate(-50%, -50%) translateX(10px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+
+
 
 @media screen and (max-width: 1000px) {
   nav {

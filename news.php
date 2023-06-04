@@ -51,14 +51,13 @@
 
     <div id="sidebar-overlay"></div>
 
-        <div class="signin">
-          <form onsubmit="return false;">
-            <input type="hidden" name="form_key" value="Form">
-            <input type="text" name="username" placeholder="Nume de utilizator" required>
-            <input type="password" name="password" placeholder="Parola" required>
-            <button onclick="login()">Login</button>
-          </form>
-        </div>
+    <div class="signin">
+      <form onsubmit="login(); return false;">
+        <input type="text" id="username" name="username" placeholder="Nume de utilizator" required>
+        <input type="password" id="password" name="password" placeholder="Parola" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
 
     <div class="sidebar">
       <ul>
@@ -142,4 +141,5 @@
   <script src="script/navbar.js"></script>
   <script src="script/main.js"></script>
   <script src="script/news.js"></script>
+   <script src="script/footer.js"></script>
 </html>

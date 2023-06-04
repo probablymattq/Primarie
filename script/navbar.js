@@ -27,13 +27,28 @@ $(document).ready(function () {
     }
   });
 
-  $('#signin-btn').click(function () {
-    overlay.show();
+  function getCookie(cname) {
+    let login = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(login) === 0) {
+        return c.substring(login.length, c.length);
+      }
+    }
+    return "";
+  }
 
-    if (signin.css("display") === "flex") {
-      signin.css("display", "none");
+
+  $('#signin-btn').click(function () {
+    if(getCookie("login") === "true") {
+      logout();
     } else {
-      signin.css("display", "flex");
+      overlay.show();
+      if (signin.css("display") === "flex") signin.css("display", "none")
+      else signin.css("display", "flex")
     }
   })
 });
@@ -55,9 +70,31 @@ $(document).keydown(function (e) {
 });
 
 function login() {
-  console.log("a");
-  $('#signin-btn').css({ color: "#2871fa" })
-  $(".signin").css("display", "none");
-  $("#sidebar-overlay").hide();
+  let username = $("#username").val();
+  let password = $("#password").val();
+  if (username === "admin" && password === "admin") {
+    $('#signin-btn').css({color: "#2871fa"})
+    $(".signin").css("display", "none");
+    $("#sidebar-overlay").hide();
+    setCookie("login", "true", 1);
+    location.reload();
+  } else {
+    $(".signin").addClass("shake");
+    setTimeout(function () {
+      $(".signin").removeClass("shake");
+    }, 500);
+  }
 }
 
+function logout() {
+  $('#signin-btn').css({ color: "#1d1d1d" })
+  setCookie("login", "", -1);
+  location.reload();
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const date = new Date();
+  date.setTime(date.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+date.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}

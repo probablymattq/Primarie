@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    showButtons();
+
     $("#openFormButton").click(function () {
         $("#formContainer").show();
         $("#overlay").show();
@@ -10,6 +12,17 @@ $(document).ready(function () {
         $("#window").hide();
     });
 });
+
+function loggedIn() {
+    let user = getCookie("login");
+    return user !== "";
+}
+
+function showButtons() {
+    if(loggedIn() === true) {
+        $("#openFormButton").css({ display: "block" })
+    }
+}
 
     $(document).click(function (e) {
         let append, title, content, author;
@@ -50,8 +63,8 @@ $(document).ready(function () {
                     content?.innerHTML +
                     "</div>" +
                     '<div class="author">' +
-                    author?.innerHTML +
-                    '</div><button id="deleteNews">Șterge</button>'
+                    author?.innerHTML
+                if(loggedIn() === true) append = append + '</div><button id="deleteNews">Șterge</button>'
                 showWindow();
             }
 
@@ -70,8 +83,9 @@ $(document).ready(function () {
                     content?.innerHTML +
                     "</div>" +
                     '<div class="author">' +
-                    author?.innerHTML +
-                    '</div><button id="deleteNews">Șterge</button>'
+                    author?.innerHTML
+                if(loggedIn() === true) append = append + '</div><button id="deleteNews">Șterge</button>'
+
                 showWindow();
             }
         }
