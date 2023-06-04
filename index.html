@@ -1,125 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <title>Primăria Coșcalia</title>
-    <link
-      rel="icon"
-      href="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script/footer.js"></script>
-  </head>
-
-  <!--Navigation bar-->
-  <header>
-    <img
-      src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/co%C8%99calia%20gradient.png?v=1684871319106"
-      alt="stema"
-    />
-    <nav>
-      <ul>
-        <li><a href="#" style="color: #2871fa">Principal</a></li>
-        <li><a href="news.php">Noutăți</a></li>
-        <li><a href="services.html">Servicii</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><i class='fas fa-user-alt' id='signin-btn'></i></li>
-      </ul>
-    </nav>
-
-    <div class="menu-toggle">
-      <button class="menubutton">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-    </div>
-
-    <div id="sidebar-overlay"></div>
-
-    <div class="signin">
-      <form onsubmit="login(); return false;">
-        <input type="text" id="username" name="username" placeholder="Nume de utilizator" required>
-        <input type="password" id="password" name="password" placeholder="Parola" required>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-
-
-    <div class="sidebar">
-      <ul>
-        <li><a href="#" style="color: #2871fa">Principal</a></li>
-        <li><a href="news.php">Noutăți</a></li>
-        <li><a href="services.html">Servicii</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-  </header>
-
-  <body>
-
-    <button id="scrollToTopBtn" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div class="section-container">
-      <div class="section">
-        <div class="page-name" id="index-name"></div>
-      </div>
-    </div>
-  </body>
-  <footer>
-    <div class="footer-wrapper">
-      <div class="footer-section">
-        <img
-          src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363"
-          alt="Image 1"
-        />
-      </div>
-      <div class="footer-section"></div>
-      <div class="footer-section"></div>
-      <div class="footer-section"></div>
-      <div class="footer-section">
-        <h3>Despre noi</h3>
-        <p>
-          Coșcalia este un sat pitoresc din Republica Moldova, situat în raionul Căușeni.
-          Cu o populație prietenoasă și tradiții bogate, satul oferă o atmosferă autentică,
-          îmbinând frumusețea naturală a peisajului rural cu istoria și cultura locală.
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>
-          <a href="tel:+37324366236"
-          ><i class="fas fa-phone"></i> +37324366236</a
-          ><br />
-          <a href="https://www.facebook.com/natalia.tibirna.712"
-          ><i class="fab fa-facebook"></i> Primaria Satului Coscalia</a
-          ><br />
-          <a href="mailto:primariacoscalia@mail.ru"
-          ><i class="fas fa-envelope"></i> primariacoscalia@mail.ru</a
-          >
-        </p>
-      </div>
-    </div>
-  </footer>
-  <script src="script/navbar.js"></script>
-  <script src="script/main.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Primăria Coșcalia</title>
+  <link rel="icon" href="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script/footer.js"></script>
+</head>
+<!--Navigation bar-->
+<header>
+  <img src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/co%C8%99calia%20gradient.png?v=1684871319106" alt="stema" />
+  <nav>
+    <ul>
+      <li>
+        <a href="#" style="color: #2871fa">Principal</a>
+      </li>
+      <li>
+        <a href="news.php">Noutăți</a>
+      </li>
+      <li>
+        <a href="services.html">Servicii</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <i class='fas fa-user-alt' id='signin-btn'></i>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu-toggle">
+    <button class="menubutton">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </div>
+  <div id="sidebar-overlay"></div>
+  <div class="signin">
+    <form onsubmit="login(); return false;">
+      <input type="text" id="username" name="username" placeholder="Nume de utilizator" required>
+      <input type="password" id="password" name="password" placeholder="Parola" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="#" style="color: #2871fa">Principal</a>
+      </li>
+      <li>
+        <a href="news.php">Noutăți</a>
+      </li>
+      <li>
+        <a href="services.html">Servicii</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <i class='fas fa-user-alt' id='signin-btn-2'></i>
+      </li>
+    </ul>
+  </div>
+</header>
+<body>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<section class="photo-section">
+  <img src="https://www.studio-l.online/wp-content/uploads/2022/07/Captura-ecran-414.png" />
+  <div class="text-overlay">
+    <h1>Coșcalia</h1>
+    <p>Sat pitoresc, tradiții bogate, frumusețe naturală</p>
+  </div>
+</section>
+<section class="info">
+  <div class="content">
+    <span> Satul Coşcalia este o localitate în Raionul Căuşeni situată la latitudinea 46.6855, longitudinea 29.1569 şi altitudinea de 70 metri faţă de nivelul mării. Distanţa pînă la centrul raional constituie 38 km, distanţa pînă la Chişinău constituie 68 km. Suprafața totală este 4650,19 ha, numărul de locuitori 2098 (01.01.2017) <br>Primul document care menţionează despre satul Coşcalia, datează cu anul 1760. Localitatea este un sat moldovenesc cu tradiţii de peste 257 ani, amplasat în Zona Bugeacului basarabean. Aşezarea fizico-geografică creează avantaje în special ceea ce ţine de accesul la căile magistrale Chişinău-Odesa şi a pieţei de desfacere din centrul urban apropiat Căuşeni. <br>Din înscrierile istorice se menţionează că în anul 1827 satul Coşcalia cuprindea 66 case de locuit cu o populaţie de 375 locuitori, din care majoritatea români ce alcătuiau 77 familii. Satul dispunea de 5 mori de vînt, o biserică din lemn cu Hramul Sf. Arhangheli Mihail şi Gavril, care se sărbătoreşte şi pînă astăzi la 21 noiembrie în fiecare an. La 1886 se construeşte biserica ortodoxă din piatră cu proiect arhitietonic, biserică care a activat pînă în anul 1960 cu întrerupere pînă în anul 1988 din cauza regimului totalitar comunist. </span>
+    <img src="http://coscalia.sat.md/wp-content/uploads/sites/192/2020/06/64590174_473490783430983_326259055972581376_o.jpg" alt="Coscalia" class="image">
+  </div>
+</section>
+<section class="info">
+  <h2 style="text-align: center;">"Econimia"</h2>
+  <span class="economy">Principalul domeniu de activitate economică în localitate este agricultura, care angajează un număr mare din populaţia satului. Sunt înregistrate 3 SRL, 1 Cooperativă de Întreprinzător de prestare a serviciilor, 1 Cooperativă de consum, 6 Întreprinderi individuale, 8 agenţi economici activează în comerţ. În localitate nu există întreprinderi de stat, sau asociaţii pe acţiuni. Pe teritoriul satului terenurile agricole ale deţinătorilor sunt arendate la întreprinderi cu capital străin cu oficiile înregistrate în or. Chişinău şi or. Anenii Noi.Factorii ce influienţează negativ activitatea agenţilor economici din localitate sunt preţul de cost înalt al producţiei şi nivelul mic de obţinere a profitului. Piaţa de desfacere este preponderent cea locală, raională şi într-o măsură mai mică cea naţională.</span>
+</section>
+<section class="info">
+  <img src="http://coscalia.sat.md/wp-content/uploads/sites/192/2020/06/image017.jpg" alt="Lia" class="lia-image">
+  <span class="lia">În cadrul localității activează ansamblul folcloric "Lia" conducător artistic Eșanu Vasile care activează de 25 de ani, unde sunt încadrați 16 persoane. Ansamblul participă activ în cadrul tuturor festivalelor raionale și naționale: ”De urat vom tot ura”. Festivalul Cîntecelor Pascale, Sînzîenile ș.a.</span>
+</section>
+</body>
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-section">
+      <img src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363" alt="Image 1" />
+    </div>
+    <div class="footer-section"></div>
+    <div class="footer-section"></div>
+    <div class="footer-section"></div>
+    <div class="footer-section">
+      <h3>Despre noi</h3>
+      <p> Coșcalia este un sat pitoresc din Republica Moldova, situat în raionul Căușeni. Cu o populație prietenoasă și tradiții bogate, satul oferă o atmosferă autentică, îmbinând frumusețea naturală a peisajului rural cu istoria și cultura locală. </p>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>
+        <a href="tel:+37324366236">
+          <i class="fas fa-phone"></i> +37324366236 </a>
+        <br />
+        <a href="https://www.facebook.com/natalia.tibirna.712">
+          <i class="fab fa-facebook"></i> Primaria Satului Coscalia </a>
+        <br />
+        <a href="mailto:primariacoscalia@mail.ru">
+          <i class="fas fa-envelope"></i> primariacoscalia@mail.ru </a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="script/navbar.js"></script>
+<script src="script/main.js"></script>
+<script src="script/footer.js"></script>
 </html>

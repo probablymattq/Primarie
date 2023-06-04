@@ -13,13 +13,11 @@ header {
   z-index: 999;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
 }
-
 header i {
   color: #000000;
   margin-top: 3px;
   cursor: pointer;
 }
-
 .signin {
   display: none;
   position: fixed;
@@ -36,8 +34,6 @@ header i {
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
 }
-
-
 .signin input {
   width: 60%;
   height: 1rem;
@@ -46,13 +42,11 @@ header i {
   border-radius: 1rem;
   margin-top: 0.5rem;
 }
-
 .signin input:focus {
   border-color: #2465a3;
   border-width: 2px;
   outline: none;
 }
-
 .signin button{
   background: #26408d;
   background: linear-gradient(to right, #2465a3, #26408d);
@@ -61,26 +55,22 @@ header i {
   border: none;
   cursor: pointer;
   border-radius: 1rem;
-  width: 60%;
+  width: 80%;
   margin-top: 1rem;
 }
-
 header img {
   height: 4rem;
   width: auto;
 }
-
 nav ul {
   display: flex;
   list-style: none;
   margin: 0;
   font-weight: bold;
 }
-
 nav li {
   margin: 0 1.5rem;
 }
-
 nav.toggle-button {
   padding: 10px 20px;
   color: #1d1d1d;
@@ -92,11 +82,9 @@ nav.toggle-button {
   justify-content: center;
   font-size: 1.2rem;
 }
-
 nav.toggle-button .icon {
   margin-right: 5px;
 }
-
 nav a {
   color: #1d1d1d;
   text-decoration: none;
@@ -104,43 +92,54 @@ nav a {
   text-transform: uppercase;
   transition: color 0.3s ease-out;
 }
-
 nav a:hover {
   color: #2871fa;
 }
-
 .scroll-size {
   padding: 0.3rem;
 }
-
 .shake {
   animation: shake 1s;
 }
-
 @keyframes shake {
-  0% { transform: translate(-50%, -50%) translateX(0); }
-  20%, 40%, 60%, 80% { transform: translate(-50%, -50%) translateX(-10px); }
-  30%, 50%, 70%, 90% { transform: translate(-50%, -50%) translateX(10px); }
-  100% { transform: translate(-50%, -50%) translateX(0); }
+  0% {
+    transform: translate(-50%, -50%) translateX(0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-50%, -50%) translateX(-10px);
+  }
+  30%, 50%, 70%, 90% {
+    transform: translate(-50%, -50%) translateX(10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(0);
+  }
 }
-
-
-
 @media screen and (max-width: 1000px) {
   nav {
     display: none;
   }
-
   header {
     padding: 2.5rem;
   }
-
   header img {
     height: 6rem;
     width: auto;
   }
-
   .index {
     background-color: #15354f;
+  }
+  .signin {
+    padding: 8rem 8rem;
+  }
+  .signin input {
+    width: 30rem;
+    height: 2rem;
+    font-size: 1.8rem;
+  }
+  .signin button{
+    padding: 0.8rem 8rem;
+    font-size: 1.8rem;
+    border-radius: 1.6rem;
   }
 }

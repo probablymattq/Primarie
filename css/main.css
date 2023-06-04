@@ -1,49 +1,38 @@
-html,
-body {
+html, body {
   overflow-x: hidden;
 }
-
 body {
   margin: 0;
   position: relative;
 }
-
 body.dark-theme {
   background-color: #1d1d1d;
 }
-
 :root {
   --scrollbar-color: #2465a3;
   --scrollbar-bg-color: #ffffff;
 }
-
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: var(--scrollbar-bg-color);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
 }
-
 * {
   scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
   scrollbar-width: thin;
 }
-
 ::selection {
   background-color: var(--scrollbar-color);
   color: #ffffff;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
-
 #scrollToTopBtn {
   display: none;
   position: fixed;
@@ -58,7 +47,6 @@ body.dark-theme {
   cursor: pointer;
   z-index: 1000;
 }
-
 #scrollToTopBtn.show {
   display: block;
 }
@@ -66,20 +54,17 @@ body.dark-theme {
   position: relative;
   width: 100%;
 }
-
 .section {
   background-color: #ffffff;
   margin-top: 7rem;
   width: 100%;
   position: relative;
 }
-
 .page-name {
   padding: 1.2rem;
   background: #26408d;
   background: linear-gradient(to right, #2465a3, #26408d);
 }
-
 .page-name span {
   font-family: "Optima", sans-serif;
   color: #ffffff;
@@ -89,7 +74,6 @@ body.dark-theme {
   margin-left: -4rem;
   animation: text-scroll 60s linear infinite;
 }
-
 @keyframes text-scroll {
   0% {
     transform: translateX(0%);
@@ -101,9 +85,7 @@ body.dark-theme {
     transform: translateX(-200%);
   }
 }
-
 @media screen and (max-width: 1000px) {
-
   #scrollToTopBtn {
     padding: 2.3rem;
     font-size: 1.9rem;
@@ -111,13 +93,11 @@ body.dark-theme {
     right: 2rem;
     border-radius: 4rem;
   }
-
   .section {
     margin-top: 11rem;
   }
-  
   .page-name span {
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }

@@ -21,7 +21,9 @@ $(document).ready(function() {
                 $('form')[0].reset();
                 var data = JSON.parse(response);
                 if (data.success === true) {
-                    $('#submitted').css({ display: "inline-block" });
+                    $('#submitted').css({
+                        display: "inline-block"
+                    });
                 }
             }
         });

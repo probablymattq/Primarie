@@ -1,157 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Primăria Coșcalia</title>
-    <link
-      rel="icon"
-      href="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/services.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script/footer.js"></script>
-  </head>
-
-  <!--Navigation bar-->
-  <header>
-    <img
-      src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/co%C8%99calia%20gradient.png?v=1684871319106"
-      alt="stema"
-    />
-    <nav>
-      <ul>
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="news.php">Noutăți</a></li>
-        <li><a href="#" style="color: #2871fa">Servicii</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><i class='fas fa-user-alt' id='signin-btn'></i></li>
-      </ul>
-    </nav>
-
-    <div class="menu-toggle">
-      <button class="menubutton">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-    </div>
-
-    <div id="sidebar-overlay"></div>
-
-    <div class="signin">
-      <form onsubmit="login(); return false;">
-        <input type="text" id="username" name="username" placeholder="Nume de utilizator" required>
-        <input type="password" id="password" name="password" placeholder="Parola" required>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-
-    <div class="sidebar">
-      <ul>
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="news.php">Noutăți</a></li>
-        <li><a href="#" style="color: #2871fa">Servicii</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <body>
-    <button id="scrollToTopBtn" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div class="section-container">
-      <div class="section">
-        <div class="page-name" id="services-name"></div>
-      </div>
-    </div>
-
-
-
-    <section class="services">
-      <div class="servcom">
-        <img
-          src="https://i.imgur.com/LkTImks.png"
-          alt="servicii comunale"
-          />
-        <span>Prin intermediul "Servcom Coșcalia"</span>
-      </div>
-
-      <div class="postal-services-wrapper">
-        <div class="service-section">
-          <h3>Încasări plăți</h3>
-          <p>Oferim clienților confort și siguranță, atât prin recepționarea plăților
-            în numerar în cadrul oficiilor poștale, cât și prin utilizarea
-            cardului bancar deținut de către client.</p>
-        </div>
-        <div class="service-section">
-          <h3>Colete poștale</h3>
-          <p>Prin intermediul a "Poșta Moldovei", furnizăm expediere și primire a coletelor
-          atât interne cât și internaționale. Coletele se primesc în baza actului de
-          identitate și va fi înmânat numai destinatarului.</p>
-        </div>
-        <div class="service-section">
-          <h3>Plăți sociale</h3>
-          <p>Efectuăm achitarea plăților sociale în baza
-            contractului încheiat cu Instituția publică ”Agenția de Guvernare
-            Electronică” și Ministerul Finanțelor, conform actelor normative în vigoare.</p>
-        </div>
-      </div>
-    </section>
-
-  </body>
-  <footer>
-    <div class="footer-wrapper">
-      <div class="footer-section">
-        <img
-          src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363"
-          alt="Image 1"
-        />
-      </div>
-      <div class="footer-section"></div>
-      <div class="footer-section"></div>
-      <div class="footer-section"></div>
-      <div class="footer-section">
-        <h3>Despre noi</h3>
-        <p>
-          Coșcalia este un sat pitoresc din Republica Moldova, situat în raionul Căușeni.
-          Cu o populație prietenoasă și tradiții bogate, satul oferă o atmosferă autentică,
-          îmbinând frumusețea naturală a peisajului rural cu istoria și cultura locală.
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>
-          <a href="tel:+37324366236"
-          ><i class="fas fa-phone"></i> +37324366236</a
-          ><br />
-          <a href="https://www.facebook.com/natalia.tibirna.712"
-          ><i class="fab fa-facebook"></i> Primaria Satului Coscalia</a
-          ><br />
-          <a href="mailto:primariacoscalia@mail.ru"
-          ><i class="fas fa-envelope"></i> primariacoscalia@mail.ru</a
-          >
-        </p>
-      </div>
-    </div>
-  </footer>
-  <script src="script/navbar.js"></script>
-  <script src="script/main.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Primăria Coșcalia</title>
+  <link rel="icon" href="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script/footer.js"></script>
+</head>
+<!--Navigation bar-->
+<header>
+  <img src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/co%C8%99calia%20gradient.png?v=1684871319106" alt="stema" />
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">Principal</a>
+      </li>
+      <li>
+        <a href="news.php">Noutăți</a>
+      </li>
+      <li>
+        <a href="#" style="color: #2871fa">Servicii</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <i class='fas fa-user-alt' id='signin-btn'></i>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu-toggle">
+    <button class="menubutton">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </div>
+  <div id="sidebar-overlay"></div>
+  <div class="signin">
+    <form onsubmit="login(); return false;">
+      <input type="text" id="username" name="username" placeholder="Nume de utilizator" required>
+      <input type="password" id="password" name="password" placeholder="Parola" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="index.html">Principal</a>
+      </li>
+      <li>
+        <a href="news.php">Noutăți</a>
+      </li>
+      <li>
+        <a href="#" style="color: #2871fa">Servicii</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <i class='fas fa-user-alt' id='signin-btn-2'></i>
+      </li>
+    </ul>
+  </div>
+</header>
+<body>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<div class="section-container">
+  <div class="section">
+    <div class="page-name" id="services-name"></div>
+  </div>
+</div>
+<section class="services">
+  <div class="servcom">
+    <img src="https://i.imgur.com/LkTImks.png" alt="servicii comunale" />
+    <span>
+          <strong>Servcom Coșcalia</strong> este o companie specializată în furnizarea de servicii comunitare de înaltă calitate. Înființată cu scopul de a răspunde nevoilor comunităților locale, această organizație se concentrează pe gestionarea și livrarea unor servicii esențiale, precum colectarea și gestionarea deșeurilor și furnizarea apei potabile. </span>
+  </div>
+  <h2>"Servicii Poștale"</h2>
+  <div class="postal-services-wrapper">
+    <div class="service-section">
+      <h3>Încasări plăți</h3>
+      <p>Oferim clienților confort și siguranță, atât prin recepționarea plăților în numerar în cadrul oficiilor poștale, cât și prin utilizarea cardului bancar deținut de către client.</p>
+    </div>
+    <div class="service-section">
+      <h3>Colete poștale</h3>
+      <p>Prin intermediul a "Poșta Moldovei", furnizăm expediere și primire a coletelor atât interne cât și internaționale. Coletele se primesc în baza actului de identitate și va fi înmânat numai destinatarului.</p>
+    </div>
+    <div class="service-section">
+      <h3>Plăți sociale</h3>
+      <p>Efectuăm achitarea plăților sociale în baza contractului încheiat cu Instituția publică ”Agenția de Guvernare Electronică” și Ministerul Finanțelor, conform actelor normative în vigoare.</p>
+    </div>
+  </div>
+  <span style="text-align: center">Serviciile Poștale ale <strong>satului Coșcalia</strong> reprezintă o componentă esențială în cadrul comunității, oferind o gamă variată de servicii poștale și logistice. Poșta din Coșcalia este un loc în care oamenii pot trimite și primi corespondență, pachete și alte trimiteri, asigurându-se astfel de conexiunea cu restul lumii. </span>
+</section>
+</body>
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-section">
+      <img src="https://cdn.glitch.global/0eece017-3a64-4ab8-942c-61c5ccca461d/logo.png?v=1682666429363" alt="Image 1" />
+    </div>
+    <div class="footer-section"></div>
+    <div class="footer-section"></div>
+    <div class="footer-section"></div>
+    <div class="footer-section">
+      <h3>Despre noi</h3>
+      <p> Coșcalia este un sat pitoresc din Republica Moldova, situat în raionul Căușeni. Cu o populație prietenoasă și tradiții bogate, satul oferă o atmosferă autentică, îmbinând frumusețea naturală a peisajului rural cu istoria și cultura locală. </p>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>
+        <a href="tel:+37324366236">
+          <i class="fas fa-phone"></i> +37324366236 </a>
+        <br />
+        <a href="https://www.facebook.com/natalia.tibirna.712">
+          <i class="fab fa-facebook"></i> Primaria Satului Coscalia </a>
+        <br />
+        <a href="mailto:primariacoscalia@mail.ru">
+          <i class="fas fa-envelope"></i> primariacoscalia@mail.ru </a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="script/navbar.js"></script>
+<script src="script/main.js"></script>
+<script src="script/footer.js"></script>
 </html>

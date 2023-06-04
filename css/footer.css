@@ -1,5 +1,5 @@
 footer {
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   background-color: #ffffff;
   color: #ffffff;
   position: relative;
@@ -9,7 +9,8 @@ footer {
   z-index: 998;
   font-size: 0.8rem;
   padding: 1rem 1rem;
-  border-top: 3.5px solid;
+  margin-top: 3rem;
+  border-top: 4px solid;
   border-image: linear-gradient(to right, #2465a3, #26408d) 1;
 }
 
@@ -81,7 +82,6 @@ footer {
     display: block;
     padding: 2.5rem;
     text-align: center;
-    font-size: 1.6rem;
   }
 
   .footer-section img {

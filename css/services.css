@@ -2,45 +2,57 @@
     font-family: "Helvetica Neue", sans-serif;
     display: flex;
     flex-direction: column;
-    max-width: 40rem;
+    max-width: 50rem;
     margin: 0 auto;
     width: 90%;
 }
-
 .servcom {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
-
 .servcom img {
-    width: 70%;
+    width: 50%;
     height: auto;
     margin-top: 1rem;
+}
+.services span {
     margin-bottom: 1rem;
 }
-
 .services h1 {
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-
+.services h2 {
+    text-transform: uppercase;
+    color: #0E4183;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 .postal-services-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(auto, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 7rem;
 }
-
 .service-section {
     min-height: auto;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    height: 15rem;
+    margin-bottom: 1rem;
 }
-
 .service-section h3 {
     text-transform: uppercase;
     color: #1d1d1d;
@@ -48,13 +60,27 @@
     font-weight: bold;
     text-align: center;
 }
-
 .service-section p {
     text-align: center;
 }
-
 @media screen and (max-width: 1000px) {
-.service-section {
-    padding: 0.3rem;
-}
+    .postal-services-wrapper {
+        grid-gap: 3rem;
+    }
+    .servcom img {
+        width: 60%;
+        height: auto;
+        margin-top: 1rem;
+    }
+    .services h3 {
+        font-size: 2rem;
+    }
+    .services h2 {
+        font-size: 2.5rem;
+    }
+    .service-section {
+        font-size: 1.6rem;
+        height: 35rem;
+    }
+    .service-section
 }

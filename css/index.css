@@ -1,0 +1,130 @@
+.photo-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+.photo-section img {
+    height: 100vh;
+    width: 100%;
+}
+.photo-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #26408d, white);
+    opacity: 0.8;
+    z-index: 1;
+}
+.photo-section .text-overlay {
+    font-family: "Helvetica Neue", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    z-index: 2;
+}
+.photo-section .text-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.info {
+    display: block;
+    justify-content: center;
+    font-family: "Helvetica Neue", sans-serif;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+.content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.info .content span {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: justify;
+}
+.info h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.info span {
+    display: flex;
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.image {
+    flex-grow: 1;
+    max-width: 40%;
+    height: auto;
+    border-radius: 1rem;
+    margin-left: 10rem;
+}
+.lia-image {
+    flex-grow: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 1rem;
+    display: flex;
+    margin: 0 auto;
+}
+.lia {
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.economy {
+    max-width: 90rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.info span:last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 1400px) {
+    .photo-section .text-overlay {
+        font-size: 3rem;
+        width: 100%;
+    }
+    .photo-section .text-overlay h1 {
+        font-size: 6rem;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .info .content span {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .image {
+        margin-left: 0;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    .lia {
+        max-width: 100%;
+        margin-top: 2rem;
+        font-size: 1.7rem;
+    }
+    .lia-image {
+        max-width: 100%;
+    }
+    .economy {
+        max-width: 100rem;
+        font-size: 1.7rem;
+    }
+}

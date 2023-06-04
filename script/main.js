@@ -1,42 +1,36 @@
-$(document).ready(function () {
+$(document).ready(function() {
   const scrollToTopBtn = $("#scrollToTopBtn");
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 200) {
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 60) {
       scrollToTopBtn.addClass("show");
     } else {
       scrollToTopBtn.removeClass("show");
     }
   });
 
-  scrollToTopBtn.click(function () {
-    $("html, body").animate({ scrollTop: 0 }, "smooth");
+  scrollToTopBtn.click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "smooth");
   });
 
-  const indexSection = $("#index-name");
   const contactSection = $("#contact-name");
   const newsSection = $("#news-name");
   const servicesSection = $("#services-name");
-
   const repeatText = (text, times) => {
     let repeatedText = "";
     for (let i = 0; i < times; i++) {
-      repeatedText += `${text}&nbsp;&nbsp;/&nbsp;&nbsp;<strong>${text}</strong>&nbsp;&nbsp;/&nbsp;&nbsp;`;
+      repeatedText += `${text}<strong>${text}</strong>`;
     }
     return repeatedText;
   };
 
-  const textToRepeatP = "Principal";
-  const textToRepeatC = "Contact";
-  const textToRepeatN = "Noutăți";
-  const textToRepeatS = "Servicii";
+  const textToRepeatC = "Contact&nbsp;&nbsp;/&nbsp;&nbsp;";
+  const textToRepeatN = "Noutăți&nbsp;&nbsp;/&nbsp;&nbsp;";
+  const textToRepeatS = "Servicii&nbsp;&nbsp;/&nbsp;&nbsp;";
   const repetitions = 100;
 
-  if (indexSection.length) {
-    indexSection.html(
-        "<span>" + repeatText(textToRepeatP, repetitions) + "</span>"
-    );
-  }
   if (contactSection.length) {
     contactSection.html(
         "<span>" + repeatText(textToRepeatC, repetitions) + "</span>"
@@ -55,7 +49,9 @@ $(document).ready(function () {
 });
 
 function getCookie(cname) {
-  let login = cname + "=", decodedCookie = decodeURIComponent(document.cookie), ca = decodedCookie.split(';');
+  let login = cname + "=",
+      decodedCookie = decodeURIComponent(document.cookie),
+      ca = decodedCookie.split(';');
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) === ' ') {
@@ -71,10 +67,29 @@ function getCookie(cname) {
 function checkCookie() {
   let user = getCookie("login");
   if (user !== "") {
-    $('#signin-btn').css({color: "#2871fa"})
+    $('#signin-btn').css({
+      color: "#2871fa"
+    })
+    $('#signin-btn-2').css({
+      color: "#2871fa"
+    })
   }
 }
 
 $(document).ready(function() {
   checkCookie();
+});
+
+$(document).ready(function() {
+  $('.image').click(function() {
+    var originalSrc = $(this).attr('src');
+    var $originalImage = $('<img>').attr('src', originalSrc).addClass('original-image');
+
+    var $modal = $('<div>').addClass('modal').append($originalImage);
+    $('body').append($modal);
+
+    $originalImage.click(function() {
+      $modal.remove();
+    });
+  });
 });

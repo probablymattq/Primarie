@@ -8,11 +8,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1200;
 }
-
 .menu-toggle {
   display: none;
 }
-
 .sidebar {
   display: none;
   position: fixed;
@@ -29,7 +27,6 @@
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
 }
-
 .sidebar a {
   color: #1d1d1d;
   text-decoration: none;
@@ -37,26 +34,28 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-
+.sidebar i {
+  color: #1d1d1d;
+  margin-right: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .sidebar ul {
   padding: 0;
   list-style: none;
 }
-
 .sidebar li {
   margin: 2rem 0;
 }
-
 .sidebar a:hover {
   text-decoration: none;
   color: #2871fa;
   transition: all 0.5s ease-out;
 }
-
 .show-sidebar .sidebar {
   right: 0;
 }
-
 .menubutton {
   display: inline-block;
   border: none;
@@ -65,7 +64,6 @@
   padding: 0;
   margin-right: 50px;
 }
-
 .line {
   display: block;
   width: 80px;
@@ -76,29 +74,24 @@
   transition: all 0.3s ease-in-out;
   transform-origin: center;
 }
-
 .line.vertical:nth-of-type(2) {
   transform: rotate(-90deg) translateX(0px) translateY(0px);
 }
-
 .line.vertical:nth-of-type(1) {
   transform: rotate(-90deg) translateX(-14px) translateY(-15px);
 }
-
 .line.vertical:nth-of-type(3) {
   transform: rotate(-90deg) translateX(14px) translateY(15px);
 }
-
 @media screen and (max-width: 1000px) {
   .menu-toggle {
     display: block;
   }
-
   .sidebar {
     display: none;
   }
-
   .show-sidebar .sidebar {
     right: 0;
   }
 }
+ 
