@@ -95,6 +95,7 @@
 .info span:last-child {
     margin-bottom: 0;
 }
+
 @media screen and (max-width: 1400px) {
     .photo-section .text-overlay {
         font-size: 3rem;
@@ -108,7 +109,7 @@
     }
     .info .content span {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
     .image {
         margin-left: 0;
@@ -118,13 +119,15 @@
     .lia {
         max-width: 100%;
         margin-top: 2rem;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
+
     }
     .lia-image {
         max-width: 100%;
     }
+
     .economy {
         max-width: 100rem;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 }
